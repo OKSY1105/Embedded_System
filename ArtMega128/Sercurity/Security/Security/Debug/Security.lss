@@ -1,0 +1,2064 @@
+
+Security.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000098  00800100  000009b4  00000a48  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000009b4  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000003f  00800198  00800198  00000ae0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000ae0  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000b10  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000088  00000000  00000000  00000b4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000134b  00000000  00000000  00000bd4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b7f  00000000  00000000  00001f1f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000abb  00000000  00000000  00002a9e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001a4  00000000  00000000  0000355c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000629  00000000  00000000  00003700  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000d22  00000000  00000000  00003d29  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000090  00000000  00000000  00004a4b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1d c2       	rjmp	.+1082   	; 0x4b4 <__vector_30>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e4 eb       	ldi	r30, 0xB4	; 180
+  a0:	f9 e0       	ldi	r31, 0x09	; 9
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a8 39       	cpi	r26, 0x98	; 152
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a8 e9       	ldi	r26, 0x98	; 152
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a7 3d       	cpi	r26, 0xD7	; 215
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	52 d2       	rcall	.+1188   	; 0x568 <main>
+  c4:	75 c4       	rjmp	.+2282   	; 0x9b0 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <uart_crc8>:
+
+// ==========================================
+// [명세서 5.2] CRC8 계산 함수 (필수!)
+// ==========================================
+uint8_t uart_crc8(uint8_t type, uint8_t length, const uint8_t *payload) {
+	uint8_t crc = type ^ length;
+  c8:	86 27       	eor	r24, r22
+	for (uint8_t i = 0; i < length; i++) {
+  ca:	90 e0       	ldi	r25, 0x00	; 0
+  cc:	06 c0       	rjmp	.+12     	; 0xda <uart_crc8+0x12>
+		crc ^= payload[i];
+  ce:	fa 01       	movw	r30, r20
+  d0:	e9 0f       	add	r30, r25
+  d2:	f1 1d       	adc	r31, r1
+  d4:	20 81       	ld	r18, Z
+  d6:	82 27       	eor	r24, r18
+// ==========================================
+// [명세서 5.2] CRC8 계산 함수 (필수!)
+// ==========================================
+uint8_t uart_crc8(uint8_t type, uint8_t length, const uint8_t *payload) {
+	uint8_t crc = type ^ length;
+	for (uint8_t i = 0; i < length; i++) {
+  d8:	9f 5f       	subi	r25, 0xFF	; 255
+  da:	96 17       	cp	r25, r22
+  dc:	c0 f3       	brcs	.-16     	; 0xce <uart_crc8+0x6>
+		crc ^= payload[i];
+	}
+	return crc;
+}
+  de:	08 95       	ret
+
+000000e0 <uart_send_frame>:
+
+// ==========================================
+// [명세서 5.3] 프레임 송신 함수
+// ==========================================
+void uart_send_frame(const UartFrame *frame) {
+  e0:	0f 93       	push	r16
+  e2:	1f 93       	push	r17
+  e4:	cf 93       	push	r28
+  e6:	df 93       	push	r29
+  e8:	8c 01       	movw	r16, r24
+	uint8_t crc = uart_crc8(frame->type, frame->length, frame->payload);
+  ea:	ac 01       	movw	r20, r24
+  ec:	4e 5f       	subi	r20, 0xFE	; 254
+  ee:	5f 4f       	sbci	r21, 0xFF	; 255
+  f0:	fc 01       	movw	r30, r24
+  f2:	61 81       	ldd	r22, Z+1	; 0x01
+  f4:	80 81       	ld	r24, Z
+  f6:	e8 df       	rcall	.-48     	; 0xc8 <uart_crc8>
+  f8:	d8 2f       	mov	r29, r24
+
+	// 대소문자 맞춘 UART1_putc 사용
+	UART1_putc(UART_FRAME_SOF);
+  fa:	8a ea       	ldi	r24, 0xAA	; 170
+  fc:	b5 d0       	rcall	.+362    	; 0x268 <UART1_putc>
+	UART1_putc(frame->type);
+  fe:	f8 01       	movw	r30, r16
+ 100:	80 81       	ld	r24, Z
+ 102:	b2 d0       	rcall	.+356    	; 0x268 <UART1_putc>
+	UART1_putc(frame->length);
+ 104:	f8 01       	movw	r30, r16
+ 106:	81 81       	ldd	r24, Z+1	; 0x01
+ 108:	af d0       	rcall	.+350    	; 0x268 <UART1_putc>
+ 10a:	c0 e0       	ldi	r28, 0x00	; 0
+	for (uint8_t i = 0; i < frame->length; i++) {
+ 10c:	06 c0       	rjmp	.+12     	; 0x11a <uart_send_frame+0x3a>
+ 10e:	f8 01       	movw	r30, r16
+		UART1_putc(frame->payload[i]);
+ 110:	ec 0f       	add	r30, r28
+ 112:	f1 1d       	adc	r31, r1
+ 114:	82 81       	ldd	r24, Z+2	; 0x02
+ 116:	a8 d0       	rcall	.+336    	; 0x268 <UART1_putc>
+ 118:	cf 5f       	subi	r28, 0xFF	; 255
+
+	// 대소문자 맞춘 UART1_putc 사용
+	UART1_putc(UART_FRAME_SOF);
+	UART1_putc(frame->type);
+	UART1_putc(frame->length);
+	for (uint8_t i = 0; i < frame->length; i++) {
+ 11a:	f8 01       	movw	r30, r16
+ 11c:	81 81       	ldd	r24, Z+1	; 0x01
+ 11e:	c8 17       	cp	r28, r24
+ 120:	b0 f3       	brcs	.-20     	; 0x10e <uart_send_frame+0x2e>
+		UART1_putc(frame->payload[i]);
+	}
+	UART1_putc(crc);
+ 122:	8d 2f       	mov	r24, r29
+ 124:	a1 d0       	rcall	.+322    	; 0x268 <UART1_putc>
+ 126:	df 91       	pop	r29
+}
+ 128:	cf 91       	pop	r28
+ 12a:	1f 91       	pop	r17
+ 12c:	0f 91       	pop	r16
+ 12e:	08 95       	ret
+
+00000130 <uart_parse_byte>:
+ 130:	ef 92       	push	r14
+	RX_WAIT_LENGTH,
+	RX_WAIT_PAYLOAD,
+	RX_WAIT_CRC
+} RxState;
+
+uint8_t uart_parse_byte(uint8_t byte, UartFrame *out) {
+ 132:	ff 92       	push	r15
+ 134:	1f 93       	push	r17
+ 136:	cf 93       	push	r28
+ 138:	df 93       	push	r29
+ 13a:	cd b7       	in	r28, 0x3d	; 61
+ 13c:	de b7       	in	r29, 0x3e	; 62
+ 13e:	6e 97       	sbiw	r28, 0x1e	; 30
+ 140:	0f b6       	in	r0, 0x3f	; 63
+ 142:	f8 94       	cli
+ 144:	de bf       	out	0x3e, r29	; 62
+ 146:	0f be       	out	0x3f, r0	; 63
+ 148:	cd bf       	out	0x3d, r28	; 61
+	static RxState  state      = RX_WAIT_SOF;
+	static UartFrame rx_buf;
+	static uint8_t  pay_idx   = 0;
+
+	switch (state) {
+ 14a:	90 91 b7 01 	lds	r25, 0x01B7	; 0x8001b7 <state.1639>
+ 14e:	92 30       	cpi	r25, 0x02	; 2
+ 150:	d1 f0       	breq	.+52     	; 0x186 <uart_parse_byte+0x56>
+ 152:	28 f4       	brcc	.+10     	; 0x15e <uart_parse_byte+0x2e>
+ 154:	99 23       	and	r25, r25
+ 156:	41 f0       	breq	.+16     	; 0x168 <uart_parse_byte+0x38>
+ 158:	91 30       	cpi	r25, 0x01	; 1
+ 15a:	71 f0       	breq	.+28     	; 0x178 <uart_parse_byte+0x48>
+ 15c:	68 c0       	rjmp	.+208    	; 0x22e <uart_parse_byte+0xfe>
+ 15e:	93 30       	cpi	r25, 0x03	; 3
+ 160:	29 f1       	breq	.+74     	; 0x1ac <uart_parse_byte+0x7c>
+ 162:	94 30       	cpi	r25, 0x04	; 4
+ 164:	b1 f1       	breq	.+108    	; 0x1d2 <uart_parse_byte+0xa2>
+ 166:	63 c0       	rjmp	.+198    	; 0x22e <uart_parse_byte+0xfe>
+		case RX_WAIT_SOF:
+		if (byte == UART_FRAME_SOF) state = RX_WAIT_TYPE;
+ 168:	8a 3a       	cpi	r24, 0xAA	; 170
+ 16a:	09 f0       	breq	.+2      	; 0x16e <uart_parse_byte+0x3e>
+ 16c:	62 c0       	rjmp	.+196    	; 0x232 <uart_parse_byte+0x102>
+ 16e:	81 e0       	ldi	r24, 0x01	; 1
+ 170:	80 93 b7 01 	sts	0x01B7, r24	; 0x8001b7 <state.1639>
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+			uart_send_frame(&err);
+			break;
+		}
+	}
+	return 0;
+ 174:	80 e0       	ldi	r24, 0x00	; 0
+ 176:	60 c0       	rjmp	.+192    	; 0x238 <uart_parse_byte+0x108>
+		case RX_WAIT_SOF:
+		if (byte == UART_FRAME_SOF) state = RX_WAIT_TYPE;
+		break;
+
+		case RX_WAIT_TYPE:
+		rx_buf.type = byte;
+ 178:	80 93 99 01 	sts	0x0199, r24	; 0x800199 <rx_buf.1640>
+		state = RX_WAIT_LENGTH;
+ 17c:	82 e0       	ldi	r24, 0x02	; 2
+ 17e:	80 93 b7 01 	sts	0x01B7, r24	; 0x8001b7 <state.1639>
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+			uart_send_frame(&err);
+			break;
+		}
+	}
+	return 0;
+ 182:	80 e0       	ldi	r24, 0x00	; 0
+		break;
+
+		case RX_WAIT_TYPE:
+		rx_buf.type = byte;
+		state = RX_WAIT_LENGTH;
+		break;
+ 184:	59 c0       	rjmp	.+178    	; 0x238 <uart_parse_byte+0x108>
+
+		case RX_WAIT_LENGTH:
+		if (byte > UART_FRAME_MAX_PAYLOAD) {
+ 186:	8d 31       	cpi	r24, 0x1D	; 29
+ 188:	20 f0       	brcs	.+8      	; 0x192 <uart_parse_byte+0x62>
+			state = RX_WAIT_SOF;  /* 범위 초과 → 재동기화 */
+ 18a:	10 92 b7 01 	sts	0x01B7, r1	; 0x8001b7 <state.1639>
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+			uart_send_frame(&err);
+			break;
+		}
+	}
+	return 0;
+ 18e:	80 e0       	ldi	r24, 0x00	; 0
+ 190:	53 c0       	rjmp	.+166    	; 0x238 <uart_parse_byte+0x108>
+
+		case RX_WAIT_LENGTH:
+		if (byte > UART_FRAME_MAX_PAYLOAD) {
+			state = RX_WAIT_SOF;  /* 범위 초과 → 재동기화 */
+			} else {
+			rx_buf.length = byte;
+ 192:	80 93 9a 01 	sts	0x019A, r24	; 0x80019a <rx_buf.1640+0x1>
+			pay_idx = 0;
+ 196:	10 92 98 01 	sts	0x0198, r1	; 0x800198 <__data_end>
+			state = (byte == 0) ? RX_WAIT_CRC : RX_WAIT_PAYLOAD;
+ 19a:	81 11       	cpse	r24, r1
+ 19c:	02 c0       	rjmp	.+4      	; 0x1a2 <uart_parse_byte+0x72>
+ 19e:	84 e0       	ldi	r24, 0x04	; 4
+ 1a0:	01 c0       	rjmp	.+2      	; 0x1a4 <uart_parse_byte+0x74>
+ 1a2:	83 e0       	ldi	r24, 0x03	; 3
+ 1a4:	80 93 b7 01 	sts	0x01B7, r24	; 0x8001b7 <state.1639>
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+			uart_send_frame(&err);
+			break;
+		}
+	}
+	return 0;
+ 1a8:	80 e0       	ldi	r24, 0x00	; 0
+ 1aa:	46 c0       	rjmp	.+140    	; 0x238 <uart_parse_byte+0x108>
+			state = (byte == 0) ? RX_WAIT_CRC : RX_WAIT_PAYLOAD;
+		}
+		break;
+
+		case RX_WAIT_PAYLOAD:
+		rx_buf.payload[pay_idx++] = byte;
+ 1ac:	e0 91 98 01 	lds	r30, 0x0198	; 0x800198 <__data_end>
+ 1b0:	91 e0       	ldi	r25, 0x01	; 1
+ 1b2:	9e 0f       	add	r25, r30
+ 1b4:	90 93 98 01 	sts	0x0198, r25	; 0x800198 <__data_end>
+ 1b8:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ba:	e7 56       	subi	r30, 0x67	; 103
+ 1bc:	fe 4f       	sbci	r31, 0xFE	; 254
+ 1be:	82 83       	std	Z+2, r24	; 0x02
+		if (pay_idx >= rx_buf.length) state = RX_WAIT_CRC;
+ 1c0:	80 91 9a 01 	lds	r24, 0x019A	; 0x80019a <rx_buf.1640+0x1>
+ 1c4:	98 17       	cp	r25, r24
+ 1c6:	b8 f1       	brcs	.+110    	; 0x236 <uart_parse_byte+0x106>
+ 1c8:	84 e0       	ldi	r24, 0x04	; 4
+ 1ca:	80 93 b7 01 	sts	0x01B7, r24	; 0x8001b7 <state.1639>
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+			uart_send_frame(&err);
+			break;
+		}
+	}
+	return 0;
+ 1ce:	80 e0       	ldi	r24, 0x00	; 0
+ 1d0:	33 c0       	rjmp	.+102    	; 0x238 <uart_parse_byte+0x108>
+ 1d2:	7b 01       	movw	r14, r22
+ 1d4:	18 2f       	mov	r17, r24
+		rx_buf.payload[pay_idx++] = byte;
+		if (pay_idx >= rx_buf.length) state = RX_WAIT_CRC;
+		break;
+
+		case RX_WAIT_CRC: {
+			uint8_t expected = uart_crc8(rx_buf.type, rx_buf.length, rx_buf.payload);
+ 1d6:	e9 e9       	ldi	r30, 0x99	; 153
+ 1d8:	f1 e0       	ldi	r31, 0x01	; 1
+ 1da:	61 81       	ldd	r22, Z+1	; 0x01
+ 1dc:	4b e9       	ldi	r20, 0x9B	; 155
+ 1de:	51 e0       	ldi	r21, 0x01	; 1
+ 1e0:	80 81       	ld	r24, Z
+ 1e2:	72 df       	rcall	.-284    	; 0xc8 <uart_crc8>
+			state = RX_WAIT_SOF;
+ 1e4:	10 92 b7 01 	sts	0x01B7, r1	; 0x8001b7 <state.1639>
+			if (byte == expected) {
+ 1e8:	81 13       	cpse	r24, r17
+ 1ea:	0a c0       	rjmp	.+20     	; 0x200 <uart_parse_byte+0xd0>
+				*out = rx_buf;
+ 1ec:	8e e1       	ldi	r24, 0x1E	; 30
+ 1ee:	e9 e9       	ldi	r30, 0x99	; 153
+ 1f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 1f2:	d7 01       	movw	r26, r14
+ 1f4:	01 90       	ld	r0, Z+
+ 1f6:	0d 92       	st	X+, r0
+ 1f8:	8a 95       	dec	r24
+ 1fa:	e1 f7       	brne	.-8      	; 0x1f4 <uart_parse_byte+0xc4>
+				return 1;  /* 프레임 완성 */
+ 1fc:	81 e0       	ldi	r24, 0x01	; 1
+ 1fe:	1c c0       	rjmp	.+56     	; 0x238 <uart_parse_byte+0x108>
+			}
+			/* CRC 불일치 → ERR 응답 */
+			UartFrame err = { UART_TYPE_ERR, 5, {'E',':','C','R','C'} };
+ 200:	ce 01       	movw	r24, r28
+ 202:	01 96       	adiw	r24, 0x01	; 1
+ 204:	2e e1       	ldi	r18, 0x1E	; 30
+ 206:	fc 01       	movw	r30, r24
+ 208:	11 92       	st	Z+, r1
+ 20a:	2a 95       	dec	r18
+ 20c:	e9 f7       	brne	.-6      	; 0x208 <uart_parse_byte+0xd8>
+ 20e:	24 e0       	ldi	r18, 0x04	; 4
+ 210:	29 83       	std	Y+1, r18	; 0x01
+ 212:	25 e0       	ldi	r18, 0x05	; 5
+ 214:	2a 83       	std	Y+2, r18	; 0x02
+ 216:	25 e4       	ldi	r18, 0x45	; 69
+ 218:	2b 83       	std	Y+3, r18	; 0x03
+ 21a:	2a e3       	ldi	r18, 0x3A	; 58
+ 21c:	2c 83       	std	Y+4, r18	; 0x04
+ 21e:	23 e4       	ldi	r18, 0x43	; 67
+ 220:	2d 83       	std	Y+5, r18	; 0x05
+ 222:	32 e5       	ldi	r19, 0x52	; 82
+ 224:	3e 83       	std	Y+6, r19	; 0x06
+			uart_send_frame(&err);
+ 226:	2f 83       	std	Y+7, r18	; 0x07
+ 228:	5b df       	rcall	.-330    	; 0xe0 <uart_send_frame>
+			break;
+		}
+	}
+	return 0;
+ 22a:	80 e0       	ldi	r24, 0x00	; 0
+ 22c:	05 c0       	rjmp	.+10     	; 0x238 <uart_parse_byte+0x108>
+ 22e:	80 e0       	ldi	r24, 0x00	; 0
+ 230:	03 c0       	rjmp	.+6      	; 0x238 <uart_parse_byte+0x108>
+ 232:	80 e0       	ldi	r24, 0x00	; 0
+ 234:	01 c0       	rjmp	.+2      	; 0x238 <uart_parse_byte+0x108>
+ 236:	80 e0       	ldi	r24, 0x00	; 0
+ 238:	6e 96       	adiw	r28, 0x1e	; 30
+ 23a:	0f b6       	in	r0, 0x3f	; 63
+ 23c:	f8 94       	cli
+ 23e:	de bf       	out	0x3e, r29	; 62
+ 240:	0f be       	out	0x3f, r0	; 63
+ 242:	cd bf       	out	0x3d, r28	; 61
+ 244:	df 91       	pop	r29
+ 246:	cf 91       	pop	r28
+ 248:	1f 91       	pop	r17
+ 24a:	ff 90       	pop	r15
+ 24c:	ef 90       	pop	r14
+ 24e:	08 95       	ret
+
+00000250 <UART1_init>:
+
+const uint8_t fnd[17]={0xc0, 0xf9,0xa4,0xb0,0x99,0x92,0x82,0xd8,0x80,0x98,0x88,0x83,0xc6,0xa1,0x86,0x8e,0x7f};
+
+void UART1_init(void) {
+	uint16_t ubrr_value = (F_CPU / (16UL * BAUD_RATE)) - 1;
+	UBRR1H = (unsigned char)(ubrr_value >> 8);
+ 250:	10 92 98 00 	sts	0x0098, r1	; 0x800098 <__TEXT_REGION_LENGTH__+0x7e0098>
+	UBRR1L = (unsigned char)ubrr_value;
+ 254:	87 e6       	ldi	r24, 0x67	; 103
+ 256:	80 93 99 00 	sts	0x0099, r24	; 0x800099 <__TEXT_REGION_LENGTH__+0x7e0099>
+	UCSR1B = (1 << RXEN1) | (1 << TXEN1) | (1 << RXCIE1);
+ 25a:	88 e9       	ldi	r24, 0x98	; 152
+ 25c:	80 93 9a 00 	sts	0x009A, r24	; 0x80009a <__TEXT_REGION_LENGTH__+0x7e009a>
+	UCSR1C = (1 << UCSZ11) | (1 << UCSZ10);
+ 260:	86 e0       	ldi	r24, 0x06	; 6
+ 262:	80 93 9d 00 	sts	0x009D, r24	; 0x80009d <__TEXT_REGION_LENGTH__+0x7e009d>
+ 266:	08 95       	ret
+
+00000268 <UART1_putc>:
+}
+
+void UART1_putc(char data) {
+	while (!(UCSR1A & (1 << UDRE1)));
+ 268:	90 91 9b 00 	lds	r25, 0x009B	; 0x80009b <__TEXT_REGION_LENGTH__+0x7e009b>
+ 26c:	95 ff       	sbrs	r25, 5
+ 26e:	fc cf       	rjmp	.-8      	; 0x268 <UART1_putc>
+	UDR1 = data;
+ 270:	80 93 9c 00 	sts	0x009C, r24	; 0x80009c <__TEXT_REGION_LENGTH__+0x7e009c>
+ 274:	08 95       	ret
+
+00000276 <send_sensor_data>:
+}
+
+void send_sensor_data(const char *tag, uint16_t val) {
+ 276:	ff 92       	push	r15
+ 278:	0f 93       	push	r16
+ 27a:	1f 93       	push	r17
+ 27c:	cf 93       	push	r28
+ 27e:	df 93       	push	r29
+ 280:	cd b7       	in	r28, 0x3d	; 61
+ 282:	de b7       	in	r29, 0x3e	; 62
+ 284:	6e 97       	sbiw	r28, 0x1e	; 30
+ 286:	0f b6       	in	r0, 0x3f	; 63
+ 288:	f8 94       	cli
+ 28a:	de bf       	out	0x3e, r29	; 62
+ 28c:	0f be       	out	0x3f, r0	; 63
+ 28e:	cd bf       	out	0x3d, r28	; 61
+ 290:	dc 01       	movw	r26, r24
+	UartFrame f;
+	f.type = UART_TYPE_DATA;
+ 292:	81 e0       	ldi	r24, 0x01	; 1
+ 294:	89 83       	std	Y+1, r24	; 0x01
+
+	uint8_t tag_len = strlen(tag);
+ 296:	fd 01       	movw	r30, r26
+ 298:	01 90       	ld	r0, Z+
+ 29a:	00 20       	and	r0, r0
+ 29c:	e9 f7       	brne	.-6      	; 0x298 <send_sensor_data+0x22>
+ 29e:	31 97       	sbiw	r30, 0x01	; 1
+ 2a0:	ea 1b       	sub	r30, r26
+ 2a2:	fb 0b       	sbc	r31, r27
+ 2a4:	8e 2f       	mov	r24, r30
+	// "태그" + ':' + 4자리 숫자 = tag_len + 5 바이트가 필요.
+	// UART_FRAME_MAX_PAYLOAD(28바이트)를 넘으면 안 되므로 방어 코드 추가.
+	if (tag_len + 5 > UART_FRAME_MAX_PAYLOAD) {
+ 2a6:	ff 27       	eor	r31, r31
+ 2a8:	35 96       	adiw	r30, 0x05	; 5
+ 2aa:	7d 97       	sbiw	r30, 0x1d	; 29
+ 2ac:	0c f0       	brlt	.+2      	; 0x2b0 <send_sensor_data+0x3a>
+ 2ae:	ca c0       	rjmp	.+404    	; 0x444 <__LOCK_REGION_LENGTH__+0x44>
+ 2b0:	90 e0       	ldi	r25, 0x00	; 0
+ 2b2:	40 e0       	ldi	r20, 0x00	; 0
+ 2b4:	0d c0       	rjmp	.+26     	; 0x2d0 <send_sensor_data+0x5a>
+		return;  // 태그가 너무 길면 전송하지 않음 (버퍼 오버플로 방지)
+	}
+
+	uint8_t idx = 0;
+	for (uint8_t i = 0; i < tag_len; i++) {
+		f.payload[idx++] = tag[i];
+ 2b6:	fd 01       	movw	r30, r26
+ 2b8:	e9 0f       	add	r30, r25
+ 2ba:	f1 1d       	adc	r31, r1
+ 2bc:	30 81       	ld	r19, Z
+ 2be:	e3 e0       	ldi	r30, 0x03	; 3
+ 2c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 2c2:	ec 0f       	add	r30, r28
+ 2c4:	fd 1f       	adc	r31, r29
+ 2c6:	e4 0f       	add	r30, r20
+ 2c8:	f1 1d       	adc	r31, r1
+ 2ca:	30 83       	st	Z, r19
+	if (tag_len + 5 > UART_FRAME_MAX_PAYLOAD) {
+		return;  // 태그가 너무 길면 전송하지 않음 (버퍼 오버플로 방지)
+	}
+
+	uint8_t idx = 0;
+	for (uint8_t i = 0; i < tag_len; i++) {
+ 2cc:	9f 5f       	subi	r25, 0xFF	; 255
+		f.payload[idx++] = tag[i];
+ 2ce:	4f 5f       	subi	r20, 0xFF	; 255
+	if (tag_len + 5 > UART_FRAME_MAX_PAYLOAD) {
+		return;  // 태그가 너무 길면 전송하지 않음 (버퍼 오버플로 방지)
+	}
+
+	uint8_t idx = 0;
+	for (uint8_t i = 0; i < tag_len; i++) {
+ 2d0:	98 17       	cp	r25, r24
+ 2d2:	88 f3       	brcs	.-30     	; 0x2b6 <send_sensor_data+0x40>
+ 2d4:	fb 01       	movw	r30, r22
+		f.payload[idx++] = tag[i];
+	}
+	f.payload[idx++] = ':';
+ 2d6:	ff 24       	eor	r15, r15
+ 2d8:	f3 94       	inc	r15
+ 2da:	f4 0e       	add	r15, r20
+ 2dc:	a3 e0       	ldi	r26, 0x03	; 3
+ 2de:	b0 e0       	ldi	r27, 0x00	; 0
+ 2e0:	ac 0f       	add	r26, r28
+ 2e2:	bd 1f       	adc	r27, r29
+ 2e4:	a4 0f       	add	r26, r20
+ 2e6:	b1 1d       	adc	r27, r1
+ 2e8:	8a e3       	ldi	r24, 0x3A	; 58
+ 2ea:	8c 93       	st	X, r24
+	f.payload[idx++] = '0' + ((val / 1000) % 10);
+ 2ec:	52 e0       	ldi	r21, 0x02	; 2
+ 2ee:	54 0f       	add	r21, r20
+ 2f0:	9b 01       	movw	r18, r22
+ 2f2:	36 95       	lsr	r19
+ 2f4:	27 95       	ror	r18
+ 2f6:	36 95       	lsr	r19
+ 2f8:	27 95       	ror	r18
+ 2fa:	36 95       	lsr	r19
+ 2fc:	27 95       	ror	r18
+ 2fe:	a5 ec       	ldi	r26, 0xC5	; 197
+ 300:	b0 e2       	ldi	r27, 0x20	; 32
+ 302:	39 d3       	rcall	.+1650   	; 0x976 <__umulhisi3>
+ 304:	8c 01       	movw	r16, r24
+ 306:	12 95       	swap	r17
+ 308:	02 95       	swap	r16
+ 30a:	0f 70       	andi	r16, 0x0F	; 15
+ 30c:	01 27       	eor	r16, r17
+ 30e:	1f 70       	andi	r17, 0x0F	; 15
+ 310:	01 27       	eor	r16, r17
+ 312:	98 01       	movw	r18, r16
+ 314:	ad ec       	ldi	r26, 0xCD	; 205
+ 316:	bc ec       	ldi	r27, 0xCC	; 204
+ 318:	2e d3       	rcall	.+1628   	; 0x976 <__umulhisi3>
+ 31a:	96 95       	lsr	r25
+ 31c:	87 95       	ror	r24
+ 31e:	96 95       	lsr	r25
+ 320:	87 95       	ror	r24
+ 322:	96 95       	lsr	r25
+ 324:	87 95       	ror	r24
+ 326:	9c 01       	movw	r18, r24
+ 328:	22 0f       	add	r18, r18
+ 32a:	33 1f       	adc	r19, r19
+ 32c:	88 0f       	add	r24, r24
+ 32e:	99 1f       	adc	r25, r25
+ 330:	88 0f       	add	r24, r24
+ 332:	99 1f       	adc	r25, r25
+ 334:	88 0f       	add	r24, r24
+ 336:	99 1f       	adc	r25, r25
+ 338:	82 0f       	add	r24, r18
+ 33a:	93 1f       	adc	r25, r19
+ 33c:	98 01       	movw	r18, r16
+ 33e:	28 1b       	sub	r18, r24
+ 340:	39 0b       	sbc	r19, r25
+ 342:	c9 01       	movw	r24, r18
+ 344:	a3 e0       	ldi	r26, 0x03	; 3
+ 346:	b0 e0       	ldi	r27, 0x00	; 0
+ 348:	ac 0f       	add	r26, r28
+ 34a:	bd 1f       	adc	r27, r29
+ 34c:	af 0d       	add	r26, r15
+ 34e:	b1 1d       	adc	r27, r1
+ 350:	80 5d       	subi	r24, 0xD0	; 208
+ 352:	8c 93       	st	X, r24
+	f.payload[idx++] = '0' + ((val /  100) % 10);
+ 354:	0f 2e       	mov	r0, r31
+ 356:	f3 e0       	ldi	r31, 0x03	; 3
+ 358:	ff 2e       	mov	r15, r31
+ 35a:	f0 2d       	mov	r31, r0
+ 35c:	f4 0e       	add	r15, r20
+ 35e:	9f 01       	movw	r18, r30
+ 360:	36 95       	lsr	r19
+ 362:	27 95       	ror	r18
+ 364:	36 95       	lsr	r19
+ 366:	27 95       	ror	r18
+ 368:	ab e7       	ldi	r26, 0x7B	; 123
+ 36a:	b4 e1       	ldi	r27, 0x14	; 20
+ 36c:	04 d3       	rcall	.+1544   	; 0x976 <__umulhisi3>
+ 36e:	8c 01       	movw	r16, r24
+ 370:	16 95       	lsr	r17
+ 372:	07 95       	ror	r16
+ 374:	98 01       	movw	r18, r16
+ 376:	ad ec       	ldi	r26, 0xCD	; 205
+ 378:	bc ec       	ldi	r27, 0xCC	; 204
+ 37a:	fd d2       	rcall	.+1530   	; 0x976 <__umulhisi3>
+ 37c:	96 95       	lsr	r25
+ 37e:	87 95       	ror	r24
+ 380:	96 95       	lsr	r25
+ 382:	87 95       	ror	r24
+ 384:	96 95       	lsr	r25
+ 386:	87 95       	ror	r24
+ 388:	9c 01       	movw	r18, r24
+ 38a:	22 0f       	add	r18, r18
+ 38c:	33 1f       	adc	r19, r19
+ 38e:	88 0f       	add	r24, r24
+ 390:	99 1f       	adc	r25, r25
+ 392:	88 0f       	add	r24, r24
+ 394:	99 1f       	adc	r25, r25
+ 396:	88 0f       	add	r24, r24
+ 398:	99 1f       	adc	r25, r25
+ 39a:	82 0f       	add	r24, r18
+ 39c:	93 1f       	adc	r25, r19
+ 39e:	98 01       	movw	r18, r16
+ 3a0:	28 1b       	sub	r18, r24
+ 3a2:	39 0b       	sbc	r19, r25
+ 3a4:	c9 01       	movw	r24, r18
+ 3a6:	a3 e0       	ldi	r26, 0x03	; 3
+ 3a8:	b0 e0       	ldi	r27, 0x00	; 0
+ 3aa:	ac 0f       	add	r26, r28
+ 3ac:	bd 1f       	adc	r27, r29
+ 3ae:	a5 0f       	add	r26, r21
+ 3b0:	b1 1d       	adc	r27, r1
+ 3b2:	80 5d       	subi	r24, 0xD0	; 208
+ 3b4:	8c 93       	st	X, r24
+	f.payload[idx++] = '0' + ((val /   10) % 10);
+ 3b6:	54 e0       	ldi	r21, 0x04	; 4
+ 3b8:	54 0f       	add	r21, r20
+ 3ba:	9f 01       	movw	r18, r30
+ 3bc:	ad ec       	ldi	r26, 0xCD	; 205
+ 3be:	bc ec       	ldi	r27, 0xCC	; 204
+ 3c0:	da d2       	rcall	.+1460   	; 0x976 <__umulhisi3>
+ 3c2:	8c 01       	movw	r16, r24
+ 3c4:	16 95       	lsr	r17
+ 3c6:	07 95       	ror	r16
+ 3c8:	16 95       	lsr	r17
+ 3ca:	07 95       	ror	r16
+ 3cc:	16 95       	lsr	r17
+ 3ce:	07 95       	ror	r16
+ 3d0:	98 01       	movw	r18, r16
+ 3d2:	d1 d2       	rcall	.+1442   	; 0x976 <__umulhisi3>
+ 3d4:	96 95       	lsr	r25
+ 3d6:	87 95       	ror	r24
+ 3d8:	96 95       	lsr	r25
+ 3da:	87 95       	ror	r24
+ 3dc:	96 95       	lsr	r25
+ 3de:	87 95       	ror	r24
+ 3e0:	9c 01       	movw	r18, r24
+ 3e2:	22 0f       	add	r18, r18
+ 3e4:	33 1f       	adc	r19, r19
+ 3e6:	88 0f       	add	r24, r24
+ 3e8:	99 1f       	adc	r25, r25
+ 3ea:	88 0f       	add	r24, r24
+ 3ec:	99 1f       	adc	r25, r25
+ 3ee:	88 0f       	add	r24, r24
+ 3f0:	99 1f       	adc	r25, r25
+ 3f2:	82 0f       	add	r24, r18
+ 3f4:	93 1f       	adc	r25, r19
+ 3f6:	98 01       	movw	r18, r16
+ 3f8:	28 1b       	sub	r18, r24
+ 3fa:	39 0b       	sbc	r19, r25
+ 3fc:	c9 01       	movw	r24, r18
+ 3fe:	a3 e0       	ldi	r26, 0x03	; 3
+ 400:	b0 e0       	ldi	r27, 0x00	; 0
+ 402:	ac 0f       	add	r26, r28
+ 404:	bd 1f       	adc	r27, r29
+ 406:	af 0d       	add	r26, r15
+ 408:	b1 1d       	adc	r27, r1
+ 40a:	80 5d       	subi	r24, 0xD0	; 208
+ 40c:	8c 93       	st	X, r24
+	f.payload[idx++] = '0' + ( val         % 10);
+ 40e:	4b 5f       	subi	r20, 0xFB	; 251
+ 410:	c8 01       	movw	r24, r16
+ 412:	88 0f       	add	r24, r24
+ 414:	99 1f       	adc	r25, r25
+ 416:	00 0f       	add	r16, r16
+ 418:	11 1f       	adc	r17, r17
+ 41a:	00 0f       	add	r16, r16
+ 41c:	11 1f       	adc	r17, r17
+ 41e:	00 0f       	add	r16, r16
+ 420:	11 1f       	adc	r17, r17
+ 422:	08 0f       	add	r16, r24
+ 424:	19 1f       	adc	r17, r25
+ 426:	bf 01       	movw	r22, r30
+ 428:	60 1b       	sub	r22, r16
+ 42a:	71 0b       	sbc	r23, r17
+ 42c:	e3 e0       	ldi	r30, 0x03	; 3
+ 42e:	f0 e0       	ldi	r31, 0x00	; 0
+ 430:	ec 0f       	add	r30, r28
+ 432:	fd 1f       	adc	r31, r29
+ 434:	e5 0f       	add	r30, r21
+ 436:	f1 1d       	adc	r31, r1
+ 438:	60 5d       	subi	r22, 0xD0	; 208
+
+	f.length = idx;
+ 43a:	60 83       	st	Z, r22
+	uart_send_frame(&f);
+ 43c:	4a 83       	std	Y+2, r20	; 0x02
+ 43e:	ce 01       	movw	r24, r28
+ 440:	01 96       	adiw	r24, 0x01	; 1
+ 442:	4e de       	rcall	.-868    	; 0xe0 <uart_send_frame>
+}
+ 444:	6e 96       	adiw	r28, 0x1e	; 30
+ 446:	0f b6       	in	r0, 0x3f	; 63
+ 448:	f8 94       	cli
+ 44a:	de bf       	out	0x3e, r29	; 62
+ 44c:	0f be       	out	0x3f, r0	; 63
+ 44e:	cd bf       	out	0x3d, r28	; 61
+ 450:	df 91       	pop	r29
+ 452:	cf 91       	pop	r28
+ 454:	1f 91       	pop	r17
+ 456:	0f 91       	pop	r16
+ 458:	ff 90       	pop	r15
+ 45a:	08 95       	ret
+
+0000045c <send_msg_data>:
+
+void send_msg_data(const char *msg) {
+ 45c:	cf 93       	push	r28
+ 45e:	df 93       	push	r29
+ 460:	cd b7       	in	r28, 0x3d	; 61
+ 462:	de b7       	in	r29, 0x3e	; 62
+ 464:	6e 97       	sbiw	r28, 0x1e	; 30
+ 466:	0f b6       	in	r0, 0x3f	; 63
+ 468:	f8 94       	cli
+ 46a:	de bf       	out	0x3e, r29	; 62
+ 46c:	0f be       	out	0x3f, r0	; 63
+ 46e:	cd bf       	out	0x3d, r28	; 61
+ 470:	ac 01       	movw	r20, r24
+	UartFrame f;
+	f.type = UART_TYPE_DATA;
+ 472:	81 e0       	ldi	r24, 0x01	; 1
+ 474:	89 83       	std	Y+1, r24	; 0x01
+	uint8_t len = 0;
+ 476:	90 e0       	ldi	r25, 0x00	; 0
+	while (msg[len] != '\0' && len < UART_FRAME_MAX_PAYLOAD) {
+ 478:	08 c0       	rjmp	.+16     	; 0x48a <send_msg_data+0x2e>
+		f.payload[len] = msg[len];
+ 47a:	e3 e0       	ldi	r30, 0x03	; 3
+ 47c:	f0 e0       	ldi	r31, 0x00	; 0
+ 47e:	ec 0f       	add	r30, r28
+ 480:	fd 1f       	adc	r31, r29
+ 482:	e9 0f       	add	r30, r25
+ 484:	f1 1d       	adc	r31, r1
+ 486:	20 83       	st	Z, r18
+		len++;
+ 488:	9f 5f       	subi	r25, 0xFF	; 255
+
+void send_msg_data(const char *msg) {
+	UartFrame f;
+	f.type = UART_TYPE_DATA;
+	uint8_t len = 0;
+	while (msg[len] != '\0' && len < UART_FRAME_MAX_PAYLOAD) {
+ 48a:	fa 01       	movw	r30, r20
+ 48c:	e9 0f       	add	r30, r25
+ 48e:	f1 1d       	adc	r31, r1
+ 490:	20 81       	ld	r18, Z
+ 492:	22 23       	and	r18, r18
+ 494:	11 f0       	breq	.+4      	; 0x49a <send_msg_data+0x3e>
+ 496:	9c 31       	cpi	r25, 0x1C	; 28
+ 498:	80 f3       	brcs	.-32     	; 0x47a <send_msg_data+0x1e>
+		f.payload[len] = msg[len];
+		len++;
+	}
+	f.length = len;
+ 49a:	9a 83       	std	Y+2, r25	; 0x02
+	uart_send_frame(&f);
+ 49c:	ce 01       	movw	r24, r28
+ 49e:	01 96       	adiw	r24, 0x01	; 1
+ 4a0:	1f de       	rcall	.-962    	; 0xe0 <uart_send_frame>
+}
+ 4a2:	6e 96       	adiw	r28, 0x1e	; 30
+ 4a4:	0f b6       	in	r0, 0x3f	; 63
+ 4a6:	f8 94       	cli
+ 4a8:	de bf       	out	0x3e, r29	; 62
+ 4aa:	0f be       	out	0x3f, r0	; 63
+ 4ac:	cd bf       	out	0x3d, r28	; 61
+ 4ae:	df 91       	pop	r29
+ 4b0:	cf 91       	pop	r28
+ 4b2:	08 95       	ret
+
+000004b4 <__vector_30>:
+
+volatile uint8_t  g_frame_ready = 0;
+volatile UartFrame g_rx_frame;
+
+ISR(USART1_RX_vect) {
+ 4b4:	1f 92       	push	r1
+ 4b6:	0f 92       	push	r0
+ 4b8:	0f b6       	in	r0, 0x3f	; 63
+ 4ba:	0f 92       	push	r0
+ 4bc:	11 24       	eor	r1, r1
+ 4be:	0b b6       	in	r0, 0x3b	; 59
+ 4c0:	0f 92       	push	r0
+ 4c2:	2f 93       	push	r18
+ 4c4:	3f 93       	push	r19
+ 4c6:	4f 93       	push	r20
+ 4c8:	5f 93       	push	r21
+ 4ca:	6f 93       	push	r22
+ 4cc:	7f 93       	push	r23
+ 4ce:	8f 93       	push	r24
+ 4d0:	9f 93       	push	r25
+ 4d2:	af 93       	push	r26
+ 4d4:	bf 93       	push	r27
+ 4d6:	ef 93       	push	r30
+ 4d8:	ff 93       	push	r31
+ 4da:	cf 93       	push	r28
+ 4dc:	df 93       	push	r29
+ 4de:	cd b7       	in	r28, 0x3d	; 61
+ 4e0:	de b7       	in	r29, 0x3e	; 62
+ 4e2:	6e 97       	sbiw	r28, 0x1e	; 30
+ 4e4:	de bf       	out	0x3e, r29	; 62
+ 4e6:	cd bf       	out	0x3d, r28	; 61
+	uint8_t byte = UDR1;
+ 4e8:	80 91 9c 00 	lds	r24, 0x009C	; 0x80009c <__TEXT_REGION_LENGTH__+0x7e009c>
+	UartFrame tmp;
+	if (uart_parse_byte(byte, &tmp)) {
+ 4ec:	be 01       	movw	r22, r28
+ 4ee:	6f 5f       	subi	r22, 0xFF	; 255
+ 4f0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 4f2:	1e de       	rcall	.-964    	; 0x130 <uart_parse_byte>
+ 4f4:	88 23       	and	r24, r24
+ 4f6:	61 f0       	breq	.+24     	; 0x510 <__vector_30+0x5c>
+		g_rx_frame = tmp;
+ 4f8:	8e e1       	ldi	r24, 0x1E	; 30
+ 4fa:	fe 01       	movw	r30, r28
+ 4fc:	31 96       	adiw	r30, 0x01	; 1
+ 4fe:	a9 eb       	ldi	r26, 0xB9	; 185
+ 500:	b1 e0       	ldi	r27, 0x01	; 1
+ 502:	01 90       	ld	r0, Z+
+ 504:	0d 92       	st	X+, r0
+ 506:	8a 95       	dec	r24
+ 508:	e1 f7       	brne	.-8      	; 0x502 <__vector_30+0x4e>
+		g_frame_ready = 1;
+ 50a:	81 e0       	ldi	r24, 0x01	; 1
+ 50c:	80 93 b8 01 	sts	0x01B8, r24	; 0x8001b8 <g_frame_ready>
+	}
+}
+ 510:	6e 96       	adiw	r28, 0x1e	; 30
+ 512:	0f b6       	in	r0, 0x3f	; 63
+ 514:	f8 94       	cli
+ 516:	de bf       	out	0x3e, r29	; 62
+ 518:	0f be       	out	0x3f, r0	; 63
+ 51a:	cd bf       	out	0x3d, r28	; 61
+ 51c:	df 91       	pop	r29
+ 51e:	cf 91       	pop	r28
+ 520:	ff 91       	pop	r31
+ 522:	ef 91       	pop	r30
+ 524:	bf 91       	pop	r27
+ 526:	af 91       	pop	r26
+ 528:	9f 91       	pop	r25
+ 52a:	8f 91       	pop	r24
+ 52c:	7f 91       	pop	r23
+ 52e:	6f 91       	pop	r22
+ 530:	5f 91       	pop	r21
+ 532:	4f 91       	pop	r20
+ 534:	3f 91       	pop	r19
+ 536:	2f 91       	pop	r18
+ 538:	0f 90       	pop	r0
+ 53a:	0b be       	out	0x3b, r0	; 59
+ 53c:	0f 90       	pop	r0
+ 53e:	0f be       	out	0x3f, r0	; 63
+ 540:	0f 90       	pop	r0
+ 542:	1f 90       	pop	r1
+ 544:	18 95       	reti
+
+00000546 <ADC_init>:
+
+void ADC_init(void) {
+	ADMUX = 0x00;
+ 546:	17 b8       	out	0x07, r1	; 7
+	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
+ 548:	87 e8       	ldi	r24, 0x87	; 135
+ 54a:	86 b9       	out	0x06, r24	; 6
+ 54c:	08 95       	ret
+
+0000054e <read_ADC>:
+}
+
+uint16_t read_ADC(uint8_t channel) {
+	ADMUX = (ADMUX & 0xF8) | (channel & 0x07);
+ 54e:	97 b1       	in	r25, 0x07	; 7
+ 550:	98 7f       	andi	r25, 0xF8	; 248
+ 552:	87 70       	andi	r24, 0x07	; 7
+ 554:	89 2b       	or	r24, r25
+ 556:	87 b9       	out	0x07, r24	; 7
+	ADCSRA |= (1 << ADSC);
+ 558:	86 b1       	in	r24, 0x06	; 6
+ 55a:	80 64       	ori	r24, 0x40	; 64
+ 55c:	86 b9       	out	0x06, r24	; 6
+	while (ADCSRA & (1 << ADSC));
+ 55e:	36 99       	sbic	0x06, 6	; 6
+ 560:	fe cf       	rjmp	.-4      	; 0x55e <read_ADC+0x10>
+	return ADC;
+ 562:	84 b1       	in	r24, 0x04	; 4
+ 564:	95 b1       	in	r25, 0x05	; 5
+}
+ 566:	08 95       	ret
+
+00000568 <main>:
+
+int main(void)
+{
+ 568:	cf 93       	push	r28
+ 56a:	df 93       	push	r29
+ 56c:	cd b7       	in	r28, 0x3d	; 61
+ 56e:	de b7       	in	r29, 0x3e	; 62
+ 570:	ec 97       	sbiw	r28, 0x3c	; 60
+ 572:	0f b6       	in	r0, 0x3f	; 63
+ 574:	f8 94       	cli
+ 576:	de bf       	out	0x3e, r29	; 62
+ 578:	0f be       	out	0x3f, r0	; 63
+ 57a:	cd bf       	out	0x3d, r28	; 61
+	PORTF = 0xF8;
+ 57c:	88 ef       	ldi	r24, 0xF8	; 248
+ 57e:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+	DDRF = 0x05;
+ 582:	85 e0       	ldi	r24, 0x05	; 5
+ 584:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+	
+	PORTC = 0x0f;
+ 588:	8f e0       	ldi	r24, 0x0F	; 15
+ 58a:	85 bb       	out	0x15, r24	; 21
+	DDRC = 0xff;
+ 58c:	8f ef       	ldi	r24, 0xFF	; 255
+ 58e:	84 bb       	out	0x14, r24	; 20
+	
+	DDRA = 0xff;
+ 590:	8a bb       	out	0x1a, r24	; 26
+	PORTA = 0xff;
+ 592:	8b bb       	out	0x1b, r24	; 27
+	
+	DDRE &= ~(1 << PE4);
+ 594:	82 b1       	in	r24, 0x02	; 2
+ 596:	8f 7e       	andi	r24, 0xEF	; 239
+ 598:	82 b9       	out	0x02, r24	; 2
+	DDRE |= (1 << PE3);
+ 59a:	82 b1       	in	r24, 0x02	; 2
+ 59c:	88 60       	ori	r24, 0x08	; 8
+ 59e:	82 b9       	out	0x02, r24	; 2
+	PORTE &= ~(1 << PE3);
+ 5a0:	83 b1       	in	r24, 0x03	; 3
+ 5a2:	87 7f       	andi	r24, 0xF7	; 247
+ 5a4:	83 b9       	out	0x03, r24	; 3
+	
+	DDRD |= (1 << PD3);
+ 5a6:	81 b3       	in	r24, 0x11	; 17
+ 5a8:	88 60       	ori	r24, 0x08	; 8
+ 5aa:	81 bb       	out	0x11, r24	; 17
+	DDRB = 0xBF;
+ 5ac:	8f eb       	ldi	r24, 0xBF	; 191
+ 5ae:	87 bb       	out	0x17, r24	; 23
+	PORTB = 0x80;
+ 5b0:	80 e8       	ldi	r24, 0x80	; 128
+ 5b2:	88 bb       	out	0x18, r24	; 24
+
+	UART1_init();
+ 5b4:	4d de       	rcall	.-870    	; 0x250 <UART1_init>
+	ADC_init();
+ 5b6:	c7 df       	rcall	.-114    	; 0x546 <ADC_init>
+ 5b8:	78 94       	sei
+	sei();
+ 5ba:	80 e0       	ldi	r24, 0x00	; 0
+
+	uint16_t echo_time = 0;
+	uint16_t distance_cm = 0;
+	uint8_t threshold_cm = 15;
+
+	send_msg_data("SYS:START");
+ 5bc:	91 e0       	ldi	r25, 0x01	; 1
+ 5be:	4e df       	rcall	.-356    	; 0x45c <send_msg_data>
+ 5c0:	51 2c       	mov	r5, r1
+	uint8_t alert_flag = 0;
+	uint8_t prev_pf3 = 1;
+	uint8_t led_state = 0x0F;
+
+	uint8_t pw_step = 0;
+	uint8_t pw_sw_pressed = 0;
+ 5c2:	61 2c       	mov	r6, r1
+	uint8_t mode = 0;
+	uint8_t alert_flag = 0;
+	uint8_t prev_pf3 = 1;
+	uint8_t led_state = 0x0F;
+
+	uint8_t pw_step = 0;
+ 5c4:	1f e0       	ldi	r17, 0x0F	; 15
+	uint16_t blink_cnt = 0;
+
+	uint8_t mode = 0;
+	uint8_t alert_flag = 0;
+	uint8_t prev_pf3 = 1;
+	uint8_t led_state = 0x0F;
+ 5c6:	22 24       	eor	r2, r2
+	uint16_t uart_cnt = 0;
+	uint16_t blink_cnt = 0;
+
+	uint8_t mode = 0;
+	uint8_t alert_flag = 0;
+	uint8_t prev_pf3 = 1;
+ 5c8:	23 94       	inc	r2
+ 5ca:	31 2c       	mov	r3, r1
+	uint16_t loop_cnt = 0;
+	uint16_t uart_cnt = 0;
+	uint16_t blink_cnt = 0;
+
+	uint8_t mode = 0;
+	uint8_t alert_flag = 0;
+ 5cc:	71 2c       	mov	r7, r1
+	uint8_t h = 0, m = 0;
+	uint16_t loop_cnt = 0;
+	uint16_t uart_cnt = 0;
+	uint16_t blink_cnt = 0;
+
+	uint8_t mode = 0;
+ 5ce:	81 2c       	mov	r8, r1
+	sei();
+	
+	uint8_t h = 0, m = 0;
+	uint16_t loop_cnt = 0;
+	uint16_t uart_cnt = 0;
+	uint16_t blink_cnt = 0;
+ 5d0:	91 2c       	mov	r9, r1
+ 5d2:	a1 2c       	mov	r10, r1
+	ADC_init();
+	sei();
+	
+	uint8_t h = 0, m = 0;
+	uint16_t loop_cnt = 0;
+	uint16_t uart_cnt = 0;
+ 5d4:	b1 2c       	mov	r11, r1
+ 5d6:	c1 2c       	mov	r12, r1
+	UART1_init();
+	ADC_init();
+	sei();
+	
+	uint8_t h = 0, m = 0;
+	uint16_t loop_cnt = 0;
+ 5d8:	d1 2c       	mov	r13, r1
+ 5da:	f1 2c       	mov	r15, r1
+
+	UART1_init();
+	ADC_init();
+	sei();
+	
+	uint8_t h = 0, m = 0;
+ 5dc:	e1 2c       	mov	r14, r1
+ 5de:	80 91 b8 01 	lds	r24, 0x01B8	; 0x8001b8 <g_frame_ready>
+	while (1)
+	{
+		// ==========================================
+		// [수정됨] PC(Python)에서 들어온 명령(CMD) 처리
+		// ==========================================
+		if (g_frame_ready) {
+ 5e2:	88 23       	and	r24, r24
+ 5e4:	09 f4       	brne	.+2      	; 0x5e8 <main+0x80>
+ 5e6:	3c c0       	rjmp	.+120    	; 0x660 <main+0xf8>
+ 5e8:	10 92 b8 01 	sts	0x01B8, r1	; 0x8001b8 <g_frame_ready>
+			g_frame_ready = 0;
+ 5ec:	8e e1       	ldi	r24, 0x1E	; 30
+			UartFrame f = g_rx_frame;
+ 5ee:	e9 eb       	ldi	r30, 0xB9	; 185
+ 5f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 5f2:	de 01       	movw	r26, r28
+ 5f4:	5f 96       	adiw	r26, 0x1f	; 31
+ 5f6:	01 90       	ld	r0, Z+
+ 5f8:	0d 92       	st	X+, r0
+ 5fa:	8a 95       	dec	r24
+ 5fc:	e1 f7       	brne	.-8      	; 0x5f6 <main+0x8e>
+ 5fe:	8f 8d       	ldd	r24, Y+31	; 0x1f
+			
+			if (f.type == UART_TYPE_CMD) {
+ 600:	82 30       	cpi	r24, 0x02	; 2
+ 602:	71 f5       	brne	.+92     	; 0x660 <main+0xf8>
+ 604:	88 a1       	ldd	r24, Y+32	; 0x20
+				// 페이로드 길이가 4이고 내용이 "stop" 또는 "STOP"인 경우
+				if (f.length == 4 && (strncmp((char*)f.payload, "stop", 4) == 0 || strncmp((char*)f.payload, "STOP", 4) == 0)) {
+ 606:	84 30       	cpi	r24, 0x04	; 4
+ 608:	d9 f4       	brne	.+54     	; 0x640 <main+0xd8>
+ 60a:	44 e0       	ldi	r20, 0x04	; 4
+ 60c:	50 e0       	ldi	r21, 0x00	; 0
+ 60e:	6a e0       	ldi	r22, 0x0A	; 10
+ 610:	71 e0       	ldi	r23, 0x01	; 1
+ 612:	ce 01       	movw	r24, r28
+ 614:	81 96       	adiw	r24, 0x21	; 33
+ 616:	be d1       	rcall	.+892    	; 0x994 <strncmp>
+ 618:	89 2b       	or	r24, r25
+ 61a:	49 f0       	breq	.+18     	; 0x62e <main+0xc6>
+ 61c:	44 e0       	ldi	r20, 0x04	; 4
+ 61e:	50 e0       	ldi	r21, 0x00	; 0
+ 620:	6f e0       	ldi	r22, 0x0F	; 15
+ 622:	71 e0       	ldi	r23, 0x01	; 1
+ 624:	ce 01       	movw	r24, r28
+ 626:	81 96       	adiw	r24, 0x21	; 33
+ 628:	b5 d1       	rcall	.+874    	; 0x994 <strncmp>
+ 62a:	89 2b       	or	r24, r25
+ 62c:	49 f4       	brne	.+18     	; 0x640 <main+0xd8>
+ 62e:	21 e0       	ldi	r18, 0x01	; 1
+					// 경계 모드(mode == 1)일 때만 해제 동작 수행
+					if (mode == 1) {
+ 630:	72 12       	cpse	r7, r18
+ 632:	06 c0       	rjmp	.+12     	; 0x640 <main+0xd8>
+						mode = 0;          // 일반 모드로 복귀
+						pw_step = 0;       // 비밀번호 진행 단계 초기화
+						alert_flag = 0;    // LED 및 부저, 모터 알람 즉시 정지
+						
+						// PC 명령으로 원격 해제되었음을 알리는 메시지 전송
+						send_msg_data("PW:OK_PC");
+ 634:	84 e1       	ldi	r24, 0x14	; 20
+ 636:	91 e0       	ldi	r25, 0x01	; 1
+ 638:	11 df       	rcall	.-478    	; 0x45c <send_msg_data>
+ 63a:	61 2c       	mov	r6, r1
+				// 페이로드 길이가 4이고 내용이 "stop" 또는 "STOP"인 경우
+				if (f.length == 4 && (strncmp((char*)f.payload, "stop", 4) == 0 || strncmp((char*)f.payload, "STOP", 4) == 0)) {
+					// 경계 모드(mode == 1)일 때만 해제 동작 수행
+					if (mode == 1) {
+						mode = 0;          // 일반 모드로 복귀
+						pw_step = 0;       // 비밀번호 진행 단계 초기화
+ 63c:	31 2c       	mov	r3, r1
+						alert_flag = 0;    // LED 및 부저, 모터 알람 즉시 정지
+ 63e:	71 2c       	mov	r7, r1
+			if (f.type == UART_TYPE_CMD) {
+				// 페이로드 길이가 4이고 내용이 "stop" 또는 "STOP"인 경우
+				if (f.length == 4 && (strncmp((char*)f.payload, "stop", 4) == 0 || strncmp((char*)f.payload, "STOP", 4) == 0)) {
+					// 경계 모드(mode == 1)일 때만 해제 동작 수행
+					if (mode == 1) {
+						mode = 0;          // 일반 모드로 복귀
+ 640:	ce 01       	movw	r24, r28
+						send_msg_data("PW:OK_PC");
+					}
+				}
+
+				// 명령 처리 후 정상 수신(ACK) 응답 전송
+				UartFrame ack = { UART_TYPE_ACK, 2, {'O','K'} };
+ 642:	01 96       	adiw	r24, 0x01	; 1
+ 644:	2e e1       	ldi	r18, 0x1E	; 30
+ 646:	fc 01       	movw	r30, r24
+ 648:	11 92       	st	Z+, r1
+ 64a:	2a 95       	dec	r18
+ 64c:	e9 f7       	brne	.-6      	; 0x648 <main+0xe0>
+ 64e:	23 e0       	ldi	r18, 0x03	; 3
+ 650:	29 83       	std	Y+1, r18	; 0x01
+ 652:	22 e0       	ldi	r18, 0x02	; 2
+ 654:	2a 83       	std	Y+2, r18	; 0x02
+ 656:	2f e4       	ldi	r18, 0x4F	; 79
+ 658:	2b 83       	std	Y+3, r18	; 0x03
+ 65a:	2b e4       	ldi	r18, 0x4B	; 75
+ 65c:	2c 83       	std	Y+4, r18	; 0x04
+				uart_send_frame(&ack);
+ 65e:	40 dd       	rcall	.-1408   	; 0xe0 <uart_send_frame>
+ 660:	ff ef       	ldi	r31, 0xFF	; 255
+			}
+		}
+
+		loop_cnt++;
+ 662:	cf 1a       	sub	r12, r31
+ 664:	df 0a       	sbc	r13, r31
+ 666:	2f ef       	ldi	r18, 0xFF	; 255
+		uart_cnt++;
+ 668:	a2 1a       	sub	r10, r18
+ 66a:	b2 0a       	sbc	r11, r18
+ 66c:	80 b1       	in	r24, 0x00	; 0
+
+		// ==========================================
+		// 1. PF3 스위치 (1->0 경계 진입 / 0->1 일반 복귀)
+		// ==========================================
+		uint8_t current_pf3 = (PINF & (1 << PF3)) ? 1 : 0;
+ 66e:	01 e0       	ldi	r16, 0x01	; 1
+ 670:	98 2f       	mov	r25, r24
+ 672:	98 70       	andi	r25, 0x08	; 8
+ 674:	83 ff       	sbrs	r24, 3
+ 676:	00 e0       	ldi	r16, 0x00	; 0
+ 678:	31 e0       	ldi	r19, 0x01	; 1
+		
+		if (prev_pf3 == 1 && current_pf3 == 0) {
+ 67a:	23 12       	cpse	r2, r19
+ 67c:	0a c0       	rjmp	.+20     	; 0x692 <main+0x12a>
+ 67e:	91 11       	cpse	r25, r1
+ 680:	08 c0       	rjmp	.+16     	; 0x692 <main+0x12a>
+			mode = 1;
+			alert_flag = 0;
+			pw_step = 0;
+			send_msg_data("MD:GUARD");
+ 682:	8d e1       	ldi	r24, 0x1D	; 29
+ 684:	91 e0       	ldi	r25, 0x01	; 1
+ 686:	ea de       	rcall	.-556    	; 0x45c <send_msg_data>
+ 688:	61 2c       	mov	r6, r1
+		uint8_t current_pf3 = (PINF & (1 << PF3)) ? 1 : 0;
+		
+		if (prev_pf3 == 1 && current_pf3 == 0) {
+			mode = 1;
+			alert_flag = 0;
+			pw_step = 0;
+ 68a:	31 2c       	mov	r3, r1
+		// ==========================================
+		uint8_t current_pf3 = (PINF & (1 << PF3)) ? 1 : 0;
+		
+		if (prev_pf3 == 1 && current_pf3 == 0) {
+			mode = 1;
+			alert_flag = 0;
+ 68c:	77 24       	eor	r7, r7
+		// 1. PF3 스위치 (1->0 경계 진입 / 0->1 일반 복귀)
+		// ==========================================
+		uint8_t current_pf3 = (PINF & (1 << PF3)) ? 1 : 0;
+		
+		if (prev_pf3 == 1 && current_pf3 == 0) {
+			mode = 1;
+ 68e:	73 94       	inc	r7
+			alert_flag = 0;
+			pw_step = 0;
+			send_msg_data("MD:GUARD");
+ 690:	0a c0       	rjmp	.+20     	; 0x6a6 <main+0x13e>
+		}
+		else if (prev_pf3 == 0 && current_pf3 == 1) {
+ 692:	21 10       	cpse	r2, r1
+ 694:	08 c0       	rjmp	.+16     	; 0x6a6 <main+0x13e>
+ 696:	99 23       	and	r25, r25
+ 698:	31 f0       	breq	.+12     	; 0x6a6 <main+0x13e>
+			mode = 0;
+			alert_flag = 0;
+			pw_step = 0;
+			send_msg_data("MD:NORMAL");
+ 69a:	86 e2       	ldi	r24, 0x26	; 38
+ 69c:	91 e0       	ldi	r25, 0x01	; 1
+ 69e:	de de       	rcall	.-580    	; 0x45c <send_msg_data>
+ 6a0:	61 2c       	mov	r6, r1
+			send_msg_data("MD:GUARD");
+		}
+		else if (prev_pf3 == 0 && current_pf3 == 1) {
+			mode = 0;
+			alert_flag = 0;
+			pw_step = 0;
+ 6a2:	31 2c       	mov	r3, r1
+			pw_step = 0;
+			send_msg_data("MD:GUARD");
+		}
+		else if (prev_pf3 == 0 && current_pf3 == 1) {
+			mode = 0;
+			alert_flag = 0;
+ 6a4:	71 2c       	mov	r7, r1
+			alert_flag = 0;
+			pw_step = 0;
+			send_msg_data("MD:GUARD");
+		}
+		else if (prev_pf3 == 0 && current_pf3 == 1) {
+			mode = 0;
+ 6a6:	81 e0       	ldi	r24, 0x01	; 1
+		prev_pf3 = current_pf3;
+
+		// ==========================================
+		// 2. 물리적 PF4~PF7 스위치 (경계 모드 알람 해제)
+		// ==========================================
+		if (mode == 1) {
+ 6a8:	78 12       	cpse	r7, r24
+ 6aa:	55 c0       	rjmp	.+170    	; 0x756 <main+0x1ee>
+ 6ac:	04 9b       	sbis	0x00, 4	; 0
+			uint8_t current_sw = 0;
+			if (!(PINF & (1 << PF4))) current_sw = 4;
+ 6ae:	08 c0       	rjmp	.+16     	; 0x6c0 <main+0x158>
+ 6b0:	05 9b       	sbis	0x00, 5	; 0
+			else if (!(PINF & (1 << PF5))) current_sw = 5;
+ 6b2:	08 c0       	rjmp	.+16     	; 0x6c4 <main+0x15c>
+ 6b4:	06 9b       	sbis	0x00, 6	; 0
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+ 6b6:	08 c0       	rjmp	.+16     	; 0x6c8 <main+0x160>
+ 6b8:	07 9b       	sbis	0x00, 7	; 0
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+ 6ba:	08 c0       	rjmp	.+16     	; 0x6cc <main+0x164>
+ 6bc:	80 e0       	ldi	r24, 0x00	; 0
+
+		// ==========================================
+		// 2. 물리적 PF4~PF7 스위치 (경계 모드 알람 해제)
+		// ==========================================
+		if (mode == 1) {
+			uint8_t current_sw = 0;
+ 6be:	07 c0       	rjmp	.+14     	; 0x6ce <main+0x166>
+ 6c0:	84 e0       	ldi	r24, 0x04	; 4
+			if (!(PINF & (1 << PF4))) current_sw = 4;
+ 6c2:	05 c0       	rjmp	.+10     	; 0x6ce <main+0x166>
+ 6c4:	85 e0       	ldi	r24, 0x05	; 5
+			else if (!(PINF & (1 << PF5))) current_sw = 5;
+ 6c6:	03 c0       	rjmp	.+6      	; 0x6ce <main+0x166>
+ 6c8:	86 e0       	ldi	r24, 0x06	; 6
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+ 6ca:	01 c0       	rjmp	.+2      	; 0x6ce <main+0x166>
+ 6cc:	87 e0       	ldi	r24, 0x07	; 7
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+ 6ce:	88 23       	and	r24, r24
+
+			if (current_sw != 0) {
+ 6d0:	09 f4       	brne	.+2      	; 0x6d4 <main+0x16c>
+ 6d2:	40 c0       	rjmp	.+128    	; 0x754 <main+0x1ec>
+				if (pw_sw_pressed == 0) {
+ 6d4:	51 10       	cpse	r5, r1
+ 6d6:	3f c0       	rjmp	.+126    	; 0x756 <main+0x1ee>
+					pw_sw_pressed = 1;
+					
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+ 6d8:	84 30       	cpi	r24, 0x04	; 4
+ 6da:	51 f4       	brne	.+20     	; 0x6f0 <main+0x188>
+ 6dc:	61 10       	cpse	r6, r1
+ 6de:	08 c0       	rjmp	.+16     	; 0x6f0 <main+0x188>
+ 6e0:	80 e3       	ldi	r24, 0x30	; 48
+ 6e2:	91 e0       	ldi	r25, 0x01	; 1
+ 6e4:	bb de       	rcall	.-650    	; 0x45c <send_msg_data>
+ 6e6:	55 24       	eor	r5, r5
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+
+			if (current_sw != 0) {
+				if (pw_sw_pressed == 0) {
+					pw_sw_pressed = 1;
+ 6e8:	53 94       	inc	r5
+ 6ea:	66 24       	eor	r6, r6
+					
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+ 6ec:	63 94       	inc	r6
+ 6ee:	33 c0       	rjmp	.+102    	; 0x756 <main+0x1ee>
+					else if (current_sw == 5 && pw_step == 1) { pw_step = 2; send_msg_data("PW:STEP2"); }
+ 6f0:	85 30       	cpi	r24, 0x05	; 5
+ 6f2:	61 f4       	brne	.+24     	; 0x70c <main+0x1a4>
+ 6f4:	91 e0       	ldi	r25, 0x01	; 1
+ 6f6:	69 12       	cpse	r6, r25
+ 6f8:	09 c0       	rjmp	.+18     	; 0x70c <main+0x1a4>
+ 6fa:	89 e3       	ldi	r24, 0x39	; 57
+ 6fc:	91 e0       	ldi	r25, 0x01	; 1
+ 6fe:	ae de       	rcall	.-676    	; 0x45c <send_msg_data>
+ 700:	55 24       	eor	r5, r5
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+
+			if (current_sw != 0) {
+				if (pw_sw_pressed == 0) {
+					pw_sw_pressed = 1;
+ 702:	53 94       	inc	r5
+ 704:	68 94       	set
+					
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+					else if (current_sw == 5 && pw_step == 1) { pw_step = 2; send_msg_data("PW:STEP2"); }
+ 706:	66 24       	eor	r6, r6
+ 708:	61 f8       	bld	r6, 1
+ 70a:	25 c0       	rjmp	.+74     	; 0x756 <main+0x1ee>
+					else if (current_sw == 6 && pw_step == 2) { pw_step = 3; send_msg_data("PW:STEP3"); }
+ 70c:	86 30       	cpi	r24, 0x06	; 6
+ 70e:	69 f4       	brne	.+26     	; 0x72a <main+0x1c2>
+ 710:	e2 e0       	ldi	r30, 0x02	; 2
+ 712:	6e 12       	cpse	r6, r30
+ 714:	0a c0       	rjmp	.+20     	; 0x72a <main+0x1c2>
+ 716:	82 e4       	ldi	r24, 0x42	; 66
+ 718:	91 e0       	ldi	r25, 0x01	; 1
+ 71a:	a0 de       	rcall	.-704    	; 0x45c <send_msg_data>
+ 71c:	55 24       	eor	r5, r5
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+
+			if (current_sw != 0) {
+				if (pw_sw_pressed == 0) {
+					pw_sw_pressed = 1;
+ 71e:	53 94       	inc	r5
+ 720:	0f 2e       	mov	r0, r31
+					
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+					else if (current_sw == 5 && pw_step == 1) { pw_step = 2; send_msg_data("PW:STEP2"); }
+					else if (current_sw == 6 && pw_step == 2) { pw_step = 3; send_msg_data("PW:STEP3"); }
+ 722:	f3 e0       	ldi	r31, 0x03	; 3
+ 724:	6f 2e       	mov	r6, r31
+ 726:	f0 2d       	mov	r31, r0
+ 728:	16 c0       	rjmp	.+44     	; 0x756 <main+0x1ee>
+					else if (current_sw == 7 && pw_step == 3) {
+ 72a:	87 30       	cpi	r24, 0x07	; 7
+ 72c:	61 f4       	brne	.+24     	; 0x746 <main+0x1de>
+ 72e:	f3 e0       	ldi	r31, 0x03	; 3
+ 730:	6f 12       	cpse	r6, r31
+						mode = 0;
+						pw_step = 0;
+						alert_flag = 0;
+						send_msg_data("PW:OK_NRM");
+ 732:	09 c0       	rjmp	.+18     	; 0x746 <main+0x1de>
+ 734:	8b e4       	ldi	r24, 0x4B	; 75
+ 736:	91 e0       	ldi	r25, 0x01	; 1
+ 738:	91 de       	rcall	.-734    	; 0x45c <send_msg_data>
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+
+			if (current_sw != 0) {
+				if (pw_sw_pressed == 0) {
+					pw_sw_pressed = 1;
+ 73a:	55 24       	eor	r5, r5
+ 73c:	53 94       	inc	r5
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+					else if (current_sw == 5 && pw_step == 1) { pw_step = 2; send_msg_data("PW:STEP2"); }
+					else if (current_sw == 6 && pw_step == 2) { pw_step = 3; send_msg_data("PW:STEP3"); }
+					else if (current_sw == 7 && pw_step == 3) {
+						mode = 0;
+						pw_step = 0;
+ 73e:	61 2c       	mov	r6, r1
+						alert_flag = 0;
+ 740:	31 2c       	mov	r3, r1
+					
+					if (current_sw == 4 && pw_step == 0) { pw_step = 1; send_msg_data("PW:STEP1"); }
+					else if (current_sw == 5 && pw_step == 1) { pw_step = 2; send_msg_data("PW:STEP2"); }
+					else if (current_sw == 6 && pw_step == 2) { pw_step = 3; send_msg_data("PW:STEP3"); }
+					else if (current_sw == 7 && pw_step == 3) {
+						mode = 0;
+ 742:	71 2c       	mov	r7, r1
+						pw_step = 0;
+						alert_flag = 0;
+						send_msg_data("PW:OK_NRM");
+ 744:	08 c0       	rjmp	.+16     	; 0x756 <main+0x1ee>
+						} else {
+						pw_step = 0;
+						send_msg_data("PW:ERROR");
+ 746:	85 e5       	ldi	r24, 0x55	; 85
+ 748:	91 e0       	ldi	r25, 0x01	; 1
+ 74a:	88 de       	rcall	.-752    	; 0x45c <send_msg_data>
+ 74c:	55 24       	eor	r5, r5
+			else if (!(PINF & (1 << PF6))) current_sw = 6;
+			else if (!(PINF & (1 << PF7))) current_sw = 7;
+
+			if (current_sw != 0) {
+				if (pw_sw_pressed == 0) {
+					pw_sw_pressed = 1;
+ 74e:	53 94       	inc	r5
+ 750:	61 2c       	mov	r6, r1
+						mode = 0;
+						pw_step = 0;
+						alert_flag = 0;
+						send_msg_data("PW:OK_NRM");
+						} else {
+						pw_step = 0;
+ 752:	01 c0       	rjmp	.+2      	; 0x756 <main+0x1ee>
+ 754:	51 2c       	mov	r5, r1
+						send_msg_data("PW:ERROR");
+					}
+				}
+				} else {
+				pw_sw_pressed = 0;
+ 756:	2e ee       	ldi	r18, 0xEE	; 238
+		}
+
+		// ==========================================
+		// 3. 타이머 (시계 기능)
+		// ==========================================
+		if (loop_cnt >= 750) {
+ 758:	c2 16       	cp	r12, r18
+ 75a:	22 e0       	ldi	r18, 0x02	; 2
+ 75c:	d2 06       	cpc	r13, r18
+ 75e:	78 f0       	brcs	.+30     	; 0x77e <main+0x216>
+ 760:	f3 94       	inc	r15
+			loop_cnt = 0;
+			m++;
+ 762:	3b e3       	ldi	r19, 0x3B	; 59
+			if (m >= 60) { m = 0; h++; }
+ 764:	3f 15       	cp	r19, r15
+ 766:	10 f4       	brcc	.+4      	; 0x76c <main+0x204>
+ 768:	e3 94       	inc	r14
+ 76a:	f1 2c       	mov	r15, r1
+ 76c:	87 e1       	ldi	r24, 0x17	; 23
+			if (h >= 24) { h = 0; }
+ 76e:	8e 15       	cp	r24, r14
+ 770:	18 f0       	brcs	.+6      	; 0x778 <main+0x210>
+ 772:	c1 2c       	mov	r12, r1
+
+		// ==========================================
+		// 3. 타이머 (시계 기능)
+		// ==========================================
+		if (loop_cnt >= 750) {
+			loop_cnt = 0;
+ 774:	d1 2c       	mov	r13, r1
+ 776:	03 c0       	rjmp	.+6      	; 0x77e <main+0x216>
+ 778:	c1 2c       	mov	r12, r1
+ 77a:	d1 2c       	mov	r13, r1
+		}
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+ 77c:	e1 2c       	mov	r14, r1
+ 77e:	9d e7       	ldi	r25, 0x7D	; 125
+ 780:	a9 16       	cp	r10, r25
+ 782:	b1 04       	cpc	r11, r1
+ 784:	08 f4       	brcc	.+2      	; 0x788 <main+0x220>
+			uart_cnt = 0;
+			
+			if (mode == 1) {
+ 786:	8c c0       	rjmp	.+280    	; 0x8a0 <main+0x338>
+ 788:	e1 e0       	ldi	r30, 0x01	; 1
+ 78a:	7e 12       	cpse	r7, r30
+				uint16_t adc_val = read_ADC(1);
+ 78c:	82 c0       	rjmp	.+260    	; 0x892 <main+0x32a>
+ 78e:	81 e0       	ldi	r24, 0x01	; 1
+ 790:	de de       	rcall	.-580    	; 0x54e <read_ADC>
+				threshold_cm = 5 + (adc_val / 20);
+ 792:	9c 01       	movw	r18, r24
+ 794:	ad ec       	ldi	r26, 0xCD	; 205
+ 796:	bc ec       	ldi	r27, 0xCC	; 204
+ 798:	ee d0       	rcall	.+476    	; 0x976 <__umulhisi3>
+ 79a:	92 95       	swap	r25
+ 79c:	82 95       	swap	r24
+ 79e:	8f 70       	andi	r24, 0x0F	; 15
+ 7a0:	89 27       	eor	r24, r25
+ 7a2:	9f 70       	andi	r25, 0x0F	; 15
+ 7a4:	89 27       	eor	r24, r25
+ 7a6:	0f 2e       	mov	r0, r31
+ 7a8:	f5 e0       	ldi	r31, 0x05	; 5
+ 7aa:	af 2e       	mov	r10, r31
+ 7ac:	f0 2d       	mov	r31, r0
+ 7ae:	a8 0e       	add	r10, r24
+ 7b0:	83 b1       	in	r24, 0x03	; 3
+
+				PORTE &= ~(1 << PE3); _delay_us(2);
+ 7b2:	87 7f       	andi	r24, 0xF7	; 247
+ 7b4:	83 b9       	out	0x03, r24	; 3
+ 7b6:	fa e0       	ldi	r31, 0x0A	; 10
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 7b8:	fa 95       	dec	r31
+ 7ba:	f1 f7       	brne	.-4      	; 0x7b8 <main+0x250>
+ 7bc:	00 c0       	rjmp	.+0      	; 0x7be <main+0x256>
+ 7be:	83 b1       	in	r24, 0x03	; 3
+				PORTE |= (1 << PE3);  _delay_us(10);
+ 7c0:	88 60       	ori	r24, 0x08	; 8
+ 7c2:	83 b9       	out	0x03, r24	; 3
+ 7c4:	25 e3       	ldi	r18, 0x35	; 53
+ 7c6:	2a 95       	dec	r18
+ 7c8:	f1 f7       	brne	.-4      	; 0x7c6 <main+0x25e>
+ 7ca:	00 00       	nop
+ 7cc:	83 b1       	in	r24, 0x03	; 3
+				PORTE &= ~(1 << PE3);
+ 7ce:	87 7f       	andi	r24, 0xF7	; 247
+ 7d0:	83 b9       	out	0x03, r24	; 3
+ 7d2:	20 e0       	ldi	r18, 0x00	; 0
+
+				uint16_t timeout = 0;
+ 7d4:	30 e0       	ldi	r19, 0x00	; 0
+ 7d6:	0a c0       	rjmp	.+20     	; 0x7ec <main+0x284>
+				uint8_t error_flag = 0;
+
+				while(!(PINE & (1 << PE4))) {
+ 7d8:	85 e3       	ldi	r24, 0x35	; 53
+ 7da:	8a 95       	dec	r24
+ 7dc:	f1 f7       	brne	.-4      	; 0x7da <main+0x272>
+ 7de:	00 00       	nop
+ 7e0:	2f 5f       	subi	r18, 0xFF	; 255
+					_delay_us(10);
+					timeout++;
+ 7e2:	3f 4f       	sbci	r19, 0xFF	; 255
+ 7e4:	29 3e       	cpi	r18, 0xE9	; 233
+					if (timeout > 1000) { error_flag = 1; break; }
+ 7e6:	93 e0       	ldi	r25, 0x03	; 3
+ 7e8:	39 07       	cpc	r19, r25
+ 7ea:	20 f4       	brcc	.+8      	; 0x7f4 <main+0x28c>
+ 7ec:	0c 9b       	sbis	0x01, 4	; 1
+				PORTE &= ~(1 << PE3);
+
+				uint16_t timeout = 0;
+				uint8_t error_flag = 0;
+
+				while(!(PINE & (1 << PE4))) {
+ 7ee:	f4 cf       	rjmp	.-24     	; 0x7d8 <main+0x270>
+ 7f0:	20 e0       	ldi	r18, 0x00	; 0
+				PORTE &= ~(1 << PE3); _delay_us(2);
+				PORTE |= (1 << PE3);  _delay_us(10);
+				PORTE &= ~(1 << PE3);
+
+				uint16_t timeout = 0;
+				uint8_t error_flag = 0;
+ 7f2:	01 c0       	rjmp	.+2      	; 0x7f6 <main+0x28e>
+ 7f4:	21 e0       	ldi	r18, 0x01	; 1
+
+				while(!(PINE & (1 << PE4))) {
+					_delay_us(10);
+					timeout++;
+					if (timeout > 1000) { error_flag = 1; break; }
+ 7f6:	21 11       	cpse	r18, r1
+				}
+
+				if (error_flag == 0) {
+ 7f8:	45 c0       	rjmp	.+138    	; 0x884 <main+0x31c>
+ 7fa:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+					TCNT3 = 0;
+ 7fe:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+ 802:	82 e0       	ldi	r24, 0x02	; 2
+					TCCR3B = (1 << CS31);
+ 804:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7e008a>
+ 808:	80 e0       	ldi	r24, 0x00	; 0
+					timeout = 0;
+ 80a:	90 e0       	ldi	r25, 0x00	; 0
+ 80c:	09 c0       	rjmp	.+18     	; 0x820 <main+0x2b8>
+					
+					while(PINE & (1 << PE4)) {
+ 80e:	e5 e3       	ldi	r30, 0x35	; 53
+ 810:	ea 95       	dec	r30
+ 812:	f1 f7       	brne	.-4      	; 0x810 <main+0x2a8>
+ 814:	00 00       	nop
+ 816:	01 96       	adiw	r24, 0x01	; 1
+						_delay_us(10);
+						timeout++;
+ 818:	89 3b       	cpi	r24, 0xB9	; 185
+						if (timeout > 3000) { error_flag = 2; break; }
+ 81a:	fb e0       	ldi	r31, 0x0B	; 11
+ 81c:	9f 07       	cpc	r25, r31
+ 81e:	18 f4       	brcc	.+6      	; 0x826 <main+0x2be>
+				if (error_flag == 0) {
+					TCNT3 = 0;
+					TCCR3B = (1 << CS31);
+					timeout = 0;
+					
+					while(PINE & (1 << PE4)) {
+ 820:	0c 99       	sbic	0x01, 4	; 1
+ 822:	f5 cf       	rjmp	.-22     	; 0x80e <main+0x2a6>
+ 824:	01 c0       	rjmp	.+2      	; 0x828 <main+0x2c0>
+						_delay_us(10);
+						timeout++;
+						if (timeout > 3000) { error_flag = 2; break; }
+ 826:	22 e0       	ldi	r18, 0x02	; 2
+					}
+					TCCR3B = 0;
+ 828:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__TEXT_REGION_LENGTH__+0x7e008a>
+
+					if (error_flag == 0) {
+ 82c:	21 11       	cpse	r18, r1
+ 82e:	23 c0       	rjmp	.+70     	; 0x876 <main+0x30e>
+						echo_time = TCNT3 / 2;
+ 830:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+ 834:	30 91 89 00 	lds	r19, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+						distance_cm = echo_time / 58;
+ 838:	af e9       	ldi	r26, 0x9F	; 159
+ 83a:	b6 e4       	ldi	r27, 0x46	; 70
+ 83c:	9c d0       	rcall	.+312    	; 0x976 <__umulhisi3>
+ 83e:	1c 01       	movw	r2, r24
+ 840:	36 94       	lsr	r3
+ 842:	27 94       	ror	r2
+ 844:	36 94       	lsr	r3
+ 846:	27 94       	ror	r2
+ 848:	36 94       	lsr	r3
+ 84a:	27 94       	ror	r2
+ 84c:	36 94       	lsr	r3
+ 84e:	27 94       	ror	r2
+ 850:	36 94       	lsr	r3
+						
+						send_sensor_data("Distance0", distance_cm);
+ 852:	27 94       	ror	r2
+ 854:	b1 01       	movw	r22, r2
+ 856:	8e e5       	ldi	r24, 0x5E	; 94
+ 858:	91 e0       	ldi	r25, 0x01	; 1
+						send_sensor_data("Threshold0",threshold_cm);
+ 85a:	0d dd       	rcall	.-1510   	; 0x276 <send_sensor_data>
+ 85c:	b1 2c       	mov	r11, r1
+ 85e:	b5 01       	movw	r22, r10
+ 860:	88 e6       	ldi	r24, 0x68	; 104
+ 862:	91 e0       	ldi	r25, 0x01	; 1
+						
+						if (distance_cm <= threshold_cm) alert_flag = 1;
+ 864:	08 dd       	rcall	.-1520   	; 0x276 <send_sensor_data>
+ 866:	a2 14       	cp	r10, r2
+ 868:	b3 04       	cpc	r11, r3
+ 86a:	b8 f0       	brcs	.+46     	; 0x89a <main+0x332>
+ 86c:	33 24       	eor	r3, r3
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+			uart_cnt = 0;
+ 86e:	33 94       	inc	r3
+ 870:	a1 2c       	mov	r10, r1
+ 872:	b1 2c       	mov	r11, r1
+						if (distance_cm <= threshold_cm) alert_flag = 1;
+						else alert_flag = 0;
+						
+						} else {
+						alert_flag = 0;
+						send_msg_data("ERR:RANGE");
+ 874:	15 c0       	rjmp	.+42     	; 0x8a0 <main+0x338>
+ 876:	83 e7       	ldi	r24, 0x73	; 115
+ 878:	91 e0       	ldi	r25, 0x01	; 1
+ 87a:	f0 dd       	rcall	.-1056   	; 0x45c <send_msg_data>
+						
+						if (distance_cm <= threshold_cm) alert_flag = 1;
+						else alert_flag = 0;
+						
+						} else {
+						alert_flag = 0;
+ 87c:	31 2c       	mov	r3, r1
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+			uart_cnt = 0;
+ 87e:	a1 2c       	mov	r10, r1
+ 880:	b1 2c       	mov	r11, r1
+ 882:	0e c0       	rjmp	.+28     	; 0x8a0 <main+0x338>
+						alert_flag = 0;
+						send_msg_data("ERR:RANGE");
+					}
+					} else {
+					alert_flag = 0;
+					send_msg_data("ERR:SONAR");
+ 884:	8d e7       	ldi	r24, 0x7D	; 125
+ 886:	91 e0       	ldi	r25, 0x01	; 1
+ 888:	e9 dd       	rcall	.-1070   	; 0x45c <send_msg_data>
+ 88a:	31 2c       	mov	r3, r1
+						} else {
+						alert_flag = 0;
+						send_msg_data("ERR:RANGE");
+					}
+					} else {
+					alert_flag = 0;
+ 88c:	a1 2c       	mov	r10, r1
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+			uart_cnt = 0;
+ 88e:	b1 2c       	mov	r11, r1
+ 890:	07 c0       	rjmp	.+14     	; 0x8a0 <main+0x338>
+ 892:	31 2c       	mov	r3, r1
+					} else {
+					alert_flag = 0;
+					send_msg_data("ERR:SONAR");
+				}
+				} else {
+				alert_flag = 0;
+ 894:	a1 2c       	mov	r10, r1
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+			uart_cnt = 0;
+ 896:	b1 2c       	mov	r11, r1
+ 898:	03 c0       	rjmp	.+6      	; 0x8a0 <main+0x338>
+ 89a:	31 2c       	mov	r3, r1
+						
+						send_sensor_data("Distance0", distance_cm);
+						send_sensor_data("Threshold0",threshold_cm);
+						
+						if (distance_cm <= threshold_cm) alert_flag = 1;
+						else alert_flag = 0;
+ 89c:	a1 2c       	mov	r10, r1
+
+		// ==========================================
+		// 4. 초음파 측정 및 ADC 임계값 갱신 (약 1초)
+		// ==========================================
+		if (uart_cnt >= 125) {
+			uart_cnt = 0;
+ 89e:	b1 2c       	mov	r11, r1
+ 8a0:	21 e0       	ldi	r18, 0x01	; 1
+		}
+
+		// ==========================================
+		// 5. 알람 동작 (모터 구동, LED 깜빡임, 부저 울림)
+		// ==========================================
+		if (alert_flag == 1 && mode == 1) {
+ 8a2:	32 12       	cpse	r3, r18
+ 8a4:	19 c0       	rjmp	.+50     	; 0x8d8 <main+0x370>
+ 8a6:	72 12       	cpse	r7, r18
+ 8a8:	17 c0       	rjmp	.+46     	; 0x8d8 <main+0x370>
+ 8aa:	3f ef       	ldi	r19, 0xFF	; 255
+			uint8_t temp_portb = (1 << PB5) | (1 << PB4) | (1 << PB2) | (1 << PB0);
+			
+			blink_cnt++;
+ 8ac:	83 1a       	sub	r8, r19
+ 8ae:	93 0a       	sbc	r9, r19
+ 8b0:	8e e1       	ldi	r24, 0x1E	; 30
+			if (blink_cnt >= 30) {
+ 8b2:	88 16       	cp	r8, r24
+ 8b4:	91 04       	cpc	r9, r1
+ 8b6:	48 f0       	brcs	.+18     	; 0x8ca <main+0x362>
+ 8b8:	1f 30       	cpi	r17, 0x0F	; 15
+				blink_cnt = 0;
+				if (led_state == 0x0F) led_state = 0x00;
+ 8ba:	21 f4       	brne	.+8      	; 0x8c4 <main+0x35c>
+ 8bc:	10 e0       	ldi	r17, 0x00	; 0
+ 8be:	81 2c       	mov	r8, r1
+		if (alert_flag == 1 && mode == 1) {
+			uint8_t temp_portb = (1 << PB5) | (1 << PB4) | (1 << PB2) | (1 << PB0);
+			
+			blink_cnt++;
+			if (blink_cnt >= 30) {
+				blink_cnt = 0;
+ 8c0:	91 2c       	mov	r9, r1
+ 8c2:	03 c0       	rjmp	.+6      	; 0x8ca <main+0x362>
+ 8c4:	1f e0       	ldi	r17, 0x0F	; 15
+				if (led_state == 0x0F) led_state = 0x00;
+				else led_state = 0x0F;
+ 8c6:	81 2c       	mov	r8, r1
+		if (alert_flag == 1 && mode == 1) {
+			uint8_t temp_portb = (1 << PB5) | (1 << PB4) | (1 << PB2) | (1 << PB0);
+			
+			blink_cnt++;
+			if (blink_cnt >= 30) {
+				blink_cnt = 0;
+ 8c8:	91 2c       	mov	r9, r1
+ 8ca:	11 23       	and	r17, r17
+				if (led_state == 0x0F) led_state = 0x00;
+				else led_state = 0x0F;
+			}
+			
+			if (led_state == 0x00) temp_portb |= (1 << PB7);
+ 8cc:	11 f0       	breq	.+4      	; 0x8d2 <main+0x36a>
+ 8ce:	85 e3       	ldi	r24, 0x35	; 53
+
+		// ==========================================
+		// 5. 알람 동작 (모터 구동, LED 깜빡임, 부저 울림)
+		// ==========================================
+		if (alert_flag == 1 && mode == 1) {
+			uint8_t temp_portb = (1 << PB5) | (1 << PB4) | (1 << PB2) | (1 << PB0);
+ 8d0:	01 c0       	rjmp	.+2      	; 0x8d4 <main+0x36c>
+ 8d2:	85 eb       	ldi	r24, 0xB5	; 181
+				blink_cnt = 0;
+				if (led_state == 0x0F) led_state = 0x00;
+				else led_state = 0x0F;
+			}
+			
+			if (led_state == 0x00) temp_portb |= (1 << PB7);
+ 8d4:	88 bb       	out	0x18, r24	; 24
+			
+			PORTB = temp_portb;
+ 8d6:	02 c0       	rjmp	.+4      	; 0x8dc <main+0x374>
+		}
+
+		// ==========================================
+		// 5. 알람 동작 (모터 구동, LED 깜빡임, 부저 울림)
+		// ==========================================
+		if (alert_flag == 1 && mode == 1) {
+ 8d8:	18 ba       	out	0x18, r1	; 24
+			
+			if (led_state == 0x00) temp_portb |= (1 << PB7);
+			
+			PORTB = temp_portb;
+			} else {
+			PORTB = 0x00;
+ 8da:	1f e0       	ldi	r17, 0x0F	; 15
+			led_state = 0x0F;
+ 8dc:	8d ec       	ldi	r24, 0xCD	; 205
+		}
+		
+		// ==========================================
+		// 6. FND 다이나믹 구동 (8ms)
+		// ==========================================
+		uint8_t disp[4] = { m % 10, m / 10, h % 10, h / 10 };
+ 8de:	f8 9e       	mul	r15, r24
+ 8e0:	91 2d       	mov	r25, r1
+ 8e2:	11 24       	eor	r1, r1
+ 8e4:	96 95       	lsr	r25
+ 8e6:	96 95       	lsr	r25
+ 8e8:	96 95       	lsr	r25
+ 8ea:	39 2f       	mov	r19, r25
+ 8ec:	33 0f       	add	r19, r19
+ 8ee:	23 2f       	mov	r18, r19
+ 8f0:	22 0f       	add	r18, r18
+ 8f2:	22 0f       	add	r18, r18
+ 8f4:	23 0f       	add	r18, r19
+ 8f6:	ef 2d       	mov	r30, r15
+ 8f8:	e2 1b       	sub	r30, r18
+ 8fa:	e9 83       	std	Y+1, r30	; 0x01
+ 8fc:	9a 83       	std	Y+2, r25	; 0x02
+ 8fe:	e8 9e       	mul	r14, r24
+ 900:	81 2d       	mov	r24, r1
+ 902:	11 24       	eor	r1, r1
+ 904:	86 95       	lsr	r24
+ 906:	86 95       	lsr	r24
+ 908:	86 95       	lsr	r24
+ 90a:	28 2f       	mov	r18, r24
+ 90c:	22 0f       	add	r18, r18
+ 90e:	92 2f       	mov	r25, r18
+ 910:	99 0f       	add	r25, r25
+ 912:	99 0f       	add	r25, r25
+ 914:	92 0f       	add	r25, r18
+ 916:	fe 2d       	mov	r31, r14
+ 918:	f9 1b       	sub	r31, r25
+ 91a:	fb 83       	std	Y+3, r31	; 0x03
+ 91c:	8c 83       	std	Y+4, r24	; 0x04
+ 91e:	20 e0       	ldi	r18, 0x00	; 0
+		for (uint8_t i = 0; i < 4; i++) {
+ 920:	26 c0       	rjmp	.+76     	; 0x96e <main+0x406>
+ 922:	81 2f       	mov	r24, r17
+			PORTC = led_state | 0xF0;
+ 924:	80 6f       	ori	r24, 0xF0	; 240
+ 926:	85 bb       	out	0x15, r24	; 21
+ 928:	82 2f       	mov	r24, r18
+			PORTA = fnd[disp[i]];
+ 92a:	90 e0       	ldi	r25, 0x00	; 0
+ 92c:	e1 e0       	ldi	r30, 0x01	; 1
+ 92e:	f0 e0       	ldi	r31, 0x00	; 0
+ 930:	ec 0f       	add	r30, r28
+ 932:	fd 1f       	adc	r31, r29
+ 934:	e8 0f       	add	r30, r24
+ 936:	f9 1f       	adc	r31, r25
+ 938:	e0 81       	ld	r30, Z
+ 93a:	f0 e0       	ldi	r31, 0x00	; 0
+ 93c:	e9 57       	subi	r30, 0x79	; 121
+ 93e:	fe 4f       	sbci	r31, 0xFE	; 254
+ 940:	30 81       	ld	r19, Z
+ 942:	3b bb       	out	0x1b, r19	; 27
+ 944:	ac 01       	movw	r20, r24
+			PORTC = (led_state & 0x0F) | (~(1 << (i + 4)) & 0xF0);
+ 946:	4c 5f       	subi	r20, 0xFC	; 252
+ 948:	5f 4f       	sbci	r21, 0xFF	; 255
+ 94a:	81 e0       	ldi	r24, 0x01	; 1
+ 94c:	90 e0       	ldi	r25, 0x00	; 0
+ 94e:	02 c0       	rjmp	.+4      	; 0x954 <main+0x3ec>
+ 950:	88 0f       	add	r24, r24
+ 952:	99 1f       	adc	r25, r25
+ 954:	4a 95       	dec	r20
+ 956:	e2 f7       	brpl	.-8      	; 0x950 <main+0x3e8>
+ 958:	80 95       	com	r24
+ 95a:	80 7f       	andi	r24, 0xF0	; 240
+ 95c:	81 2b       	or	r24, r17
+ 95e:	85 bb       	out	0x15, r24	; 21
+ 960:	8f e3       	ldi	r24, 0x3F	; 63
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 962:	9f e1       	ldi	r25, 0x1F	; 31
+ 964:	01 97       	sbiw	r24, 0x01	; 1
+ 966:	f1 f7       	brne	.-4      	; 0x964 <main+0x3fc>
+ 968:	00 c0       	rjmp	.+0      	; 0x96a <main+0x402>
+ 96a:	00 00       	nop
+ 96c:	2f 5f       	subi	r18, 0xFF	; 255
+		
+		// ==========================================
+		// 6. FND 다이나믹 구동 (8ms)
+		// ==========================================
+		uint8_t disp[4] = { m % 10, m / 10, h % 10, h / 10 };
+		for (uint8_t i = 0; i < 4; i++) {
+ 96e:	24 30       	cpi	r18, 0x04	; 4
+ 970:	c0 f2       	brcs	.-80     	; 0x922 <main+0x3ba>
+ 972:	20 2e       	mov	r2, r16
+			alert_flag = 0;
+			pw_step = 0;
+			send_msg_data("MD:NORMAL");
+		}
+		
+		prev_pf3 = current_pf3;
+ 974:	34 ce       	rjmp	.-920    	; 0x5de <main+0x76>
+
+00000976 <__umulhisi3>:
+			PORTC = led_state | 0xF0;
+			PORTA = fnd[disp[i]];
+			PORTC = (led_state & 0x0F) | (~(1 << (i + 4)) & 0xF0);
+			_delay_ms(2);
+		}
+	}
+ 976:	a2 9f       	mul	r26, r18
+ 978:	b0 01       	movw	r22, r0
+ 97a:	b3 9f       	mul	r27, r19
+ 97c:	c0 01       	movw	r24, r0
+ 97e:	a3 9f       	mul	r26, r19
+ 980:	70 0d       	add	r23, r0
+ 982:	81 1d       	adc	r24, r1
+ 984:	11 24       	eor	r1, r1
+ 986:	91 1d       	adc	r25, r1
+ 988:	b2 9f       	mul	r27, r18
+ 98a:	70 0d       	add	r23, r0
+ 98c:	81 1d       	adc	r24, r1
+ 98e:	11 24       	eor	r1, r1
+ 990:	91 1d       	adc	r25, r1
+ 992:	08 95       	ret
+
+00000994 <strncmp>:
+ 994:	fb 01       	movw	r30, r22
+ 996:	dc 01       	movw	r26, r24
+ 998:	41 50       	subi	r20, 0x01	; 1
+ 99a:	50 40       	sbci	r21, 0x00	; 0
+ 99c:	30 f0       	brcs	.+12     	; 0x9aa <strncmp+0x16>
+ 99e:	8d 91       	ld	r24, X+
+ 9a0:	01 90       	ld	r0, Z+
+ 9a2:	80 19       	sub	r24, r0
+ 9a4:	19 f4       	brne	.+6      	; 0x9ac <strncmp+0x18>
+ 9a6:	00 20       	and	r0, r0
+ 9a8:	b9 f7       	brne	.-18     	; 0x998 <strncmp+0x4>
+ 9aa:	88 1b       	sub	r24, r24
+ 9ac:	99 0b       	sbc	r25, r25
+ 9ae:	08 95       	ret
+
+000009b0 <_exit>:
+ 9b0:	f8 94       	cli
+
+000009b2 <__stop_program>:
+ 9b2:	ff cf       	rjmp	.-2      	; 0x9b2 <__stop_program>
