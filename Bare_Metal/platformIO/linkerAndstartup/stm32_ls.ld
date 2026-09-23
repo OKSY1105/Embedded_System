@@ -1,0 +1,8 @@
+ENTRY(Reset_Handler)
+
+MEMORY
+{
+	FLASH	(rx) : ORIGN = 0x80000000, LENGTH = 2048K
+	SRAM	(rwx): ORIGN = 0x20000000, LENGTH = 192K
+}
+
